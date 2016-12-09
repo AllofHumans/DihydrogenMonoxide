@@ -1,0 +1,36 @@
+html {
+    background-color: #87cbed;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+ul {
+   list-style: none; /*gets rid of bullet points*/
+   background-color: black;
+   height: 40px;
+}
+li {
+    text-align: center;
+    display: inline-block;
+    width: 130px;
+    margin-top: 10px;
+}
+li a {
+    font-family: Helvetica;
+    text-decoration: none;
+    color: #00ff00;
+   
+}
+h2 {
+    text-align: center;
+}
+p {
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 300px;
+}
+h3 {
+    margin: 10px;
+    text-align: center;
+}

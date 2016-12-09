@@ -1,0 +1,31 @@
+html {
+    background-color: white;
+}
+body {
+    text-align: center;
+    color: black;
+    font-family: "Times New Roman", serif;
+}
+ol {
+    text-align: left;
+    margin-left: 450px;
+    font-size: 18px;
+    
+}
+p {
+    font-size: 5px;
+}
+img {
+    float: right;
+    border: 0px solid black;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 90%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+ 
+}
+.rightimage {
+    float: left;
+}

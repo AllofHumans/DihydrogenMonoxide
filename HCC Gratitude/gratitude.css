@@ -1,0 +1,43 @@
+html {
+    background-color: #429ba5;
+}
+ul {
+    margin-top: 0px;
+   list-style: none; 
+   background-color: black;
+   height: 40px;
+   text-align: center;
+}
+li {
+    text-align: center;
+    display: inline-block;
+    width: 130px;
+    margin-top: 6px;
+}
+li a {
+    font-size: 25px;
+    font-family: Helvetica;
+    text-decoration: none;
+    color: #029113;
+   
+}
+.bold {
+    text-decoration: bold;
+    color: #00ff00;
+}
+h2, h4 {
+    text-align: center;
+    margin: 20px;
+    margin-left: 170px;
+    margin-right: 170px;
+}
+h3 {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 1050px;
+    border: 5px inset #029113;
+    background-color: grey;
+
+    
+}

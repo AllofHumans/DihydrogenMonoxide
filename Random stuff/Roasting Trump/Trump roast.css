@@ -1,0 +1,28 @@
+html {
+    background-color: #dd8100/*Trump hair*/;
+}
+body {
+    margin: 10px;
+    color: black;
+    font-family: Helvetica;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #3f15d6;
+}
+h1,h2 {
+    text-align: center;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    height: 30px;
+    font-weight: bold;
+}
+li {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
