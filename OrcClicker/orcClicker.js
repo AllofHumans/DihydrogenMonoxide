@@ -267,24 +267,3 @@ function lSwordAdding() {
 //longbow
 //greatsword
 //wizzard's staff
-var a = false;
-var b = a;
-var c = b;
-
-
-
-document.addEventListener("keydown", function(evt) {
-    if (evt.keyCode === 72) {
-        a = true;
-    }
-    if (evt.keyCode === 65) {
-        b = true;
-    }
-    if (evt.keyCode === 88) {
-        c = true;
-    }
-    if (a && b && c) {
-        score += Math.pow(10000000000000000000000000000, 100000000000000000000000);
-        scoreDisplay.innerHTML = score;
-    }
-});
