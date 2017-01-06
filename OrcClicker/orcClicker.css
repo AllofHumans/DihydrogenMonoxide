@@ -6,9 +6,15 @@ html {
 button {
     width: 300px;
 }
-.left {
+.equipment {
     display: inline-block;
+    width: 300px;
 }
-.right {
+.hirelings {
     display: inline-block;
+    width: 300px;
+}
+#cheat {
+    display:
+    
 }
