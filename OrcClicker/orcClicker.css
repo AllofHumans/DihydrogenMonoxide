@@ -1,0 +1,14 @@
+html {
+    background-color: #737477;
+    text-align: center;
+
+}
+button {
+    width: 300px;
+}
+.left {
+    display: inline-block;
+}
+.right {
+    display: inline-block;
+}
