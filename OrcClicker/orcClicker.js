@@ -6,7 +6,7 @@ var button = document.getElementById("head");
 var scoreDisplay = document.getElementById("score");
 var score = 0;
 
-
+document.getElementById("img2").style.display = "none";
 
 button.addEventListener("mousedown", orcHeadClick, true);
 
@@ -14,6 +14,13 @@ button.addEventListener("mousedown", orcHeadClick, true);
 function orcHeadClick() {
     score += clickPower;
     scoreDisplay.innerHTML = score;
+    document.getElementById("img2").style.display = "inline";
+    document.getElementById("head").style.display = "none";
+    window.setTimeout(orcCLickstyle, 80);
+}
+function orcCLickstyle() {
+    document.getElementById("img2").style.display = "none";
+    document.getElementById("head").style.display = "inline";
 }
 
 //autofarmers
@@ -48,6 +55,11 @@ function hobbitFarmerAdd() {
 function autofarm1() {
     score += autoFarmLevel;
     scoreDisplay.innerHTML = score;
+    if (autoFarmLevel >= 1) {
+        document.getElementById("img2").style.display = "inline";
+        document.getElementById("head").style.display = "none";
+    window.setTimeout(orcCLickstyle, 80);
+    }
 }
 
 
