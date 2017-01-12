@@ -121,7 +121,7 @@ function gondorSAdding() {
 //Elvish Soldier
 var elvishSCount = 0;
 var elvishSAdd = document.getElementById("buyElvishS");
-var elvishSCost = 3000;
+var elvishSCost = 2250;
 var elvishSLocked = true;
 var elvishSDisplayView= document.getElementById("elvishSDisplay");
 var elvishSDisplay = "Locked";
@@ -136,11 +136,35 @@ function elvishSAdding() {
         elvishSCost = elvishSCost * 2;
         elvishSDisplay = "Elvish Soldier (you have " + elvishSCount + "):" + elvishSCost;
         elvishSDisplayView.innerHTML = elvishSDisplay;
-        
+    }
+    if (elvishSCount >= 2) {
+        foolLocked = false;
+        foolDisplay = "Elvish Soldier (you have " + foolCount + "):" + foolCost;
+        foolDisplayView.innerHTML = foolDisplay;
     }
 }
 
-//Bilbo Baggins
+//Fool-of-a-took
+var foolCount = 0;
+var foolAdd = document.getElementById("buyFool");
+var foolCost = 6750;
+var foolLocked = true;
+var foolDisplayView= document.getElementById("foolDisplay");
+var foolDisplay = "Locked";
+
+foolAdd.addEventListener("mousedown", foolAdding, true);
+
+function foolAdding() {
+    if ((score >= foolCost) && (foolLocked == false)) {
+        foolCount += 1;
+        autoFarmLevel += 16;
+        score -= foolCost;
+        foolCost = foolCost * 2;
+        foolDisplay = "Peregrin Took (you have " + foolCount + "):" + foolCost;
+        foolDisplayView.innerHTML = foolDisplay;
+        
+    }
+}
 //Aragorn
 //Gandoff
 //Eru Ilúvatar (auto-win button)
@@ -241,7 +265,7 @@ function sBowAdding() {
 
 //longsword
 var lSwordCount = 0;
-var lSwordCost = 1500;
+var lSwordCost = 4500;
 var lSwordLocked = true;
 var lSwordDisplay = "locked";
 var lSwordAdd = document.getElementById("buyLSword");
@@ -258,12 +282,37 @@ function lSwordAdding() {
             lSwordDisplay = "Longsword (you have " + lSwordCount + "):" + lSwordCost;
             lSwordDisplayView.innerHTML = lSwordDisplay;
         }
+         if (lSwordCount >= 2) {
+            axeLocked = false;
+            axeDisplay = "Battleaxe (you have " + axeCount + "):" + axeCost;
+            axeDisplayView.innerHTML = axeDisplay;
+        }
 }
 
 
 
 
 //battleaxe
+var axeCount = 0;
+var axeCost = 13500;
+var axeLocked = true;
+var axeDisplay = "locked";
+var axeAdd = document.getElementById("buyAxe");
+var axeDisplayView = document.getElementById("axeDisplay");
+
+axeAdd.addEventListener("mousedown", axeAdding, true);
+
+function axeAdding() {
+        if ((score >= axeCost) && (axeLocked == false)) {
+            axeCount += 1;
+            clickPower += 16;
+            score -= axeCost;
+            axeCost = axeCost * 2;
+            axeDisplay = "Battleaxe (you have " + axeCount + "):" + axeCost;
+            axeDisplayView.innerHTML = axeDisplay;
+        }
+}
+
 //longbow
 //greatsword
 //wizzard's staff

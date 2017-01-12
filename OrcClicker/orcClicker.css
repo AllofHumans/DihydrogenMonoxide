@@ -14,9 +14,7 @@ button {
     display: inline-block;
     width: 300px;
 }
-#cheat {
+.devTools {
     display: none;
 }
-#reset {
-    display: none;
-}
+
