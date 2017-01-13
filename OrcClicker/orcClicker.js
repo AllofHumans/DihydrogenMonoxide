@@ -192,7 +192,7 @@ function kingAdding() {
         sGodLocked = false;
         sGodDisplay = "Aragorn (you have " + sGodCount + "):" + sGodCost;
         sGodDisplayView.innerHTML = sGodDisplay;
-}
+    }
 }
 
 //Gandoff
@@ -214,11 +214,47 @@ function sGodAdding() {
         sGodDisplay = "Gandoff (you have " + sGodCount + "):" + sGodCost;
         sGodDisplayView.innerHTML = sGodDisplay;
     }
+     if (sGodCount >= 2) {
+        gGodLocked = false;
+        gGodDisplay = "Eru Iluvatar (you have " + gGodCount + "):" +gGodCost;
+        gGodDisplayView.innerHTML = gGodDisplay;
+    }
 }
 
 
 //Eru Ilúvatar (auto-win button)
+var gGodCount = 0;
+var gGodAdd = document.getElementById("buyGGod");
+var gGodCost = 20250;
+var gGodLocked = true;
+var gGodDisplayView= document.getElementById("gGodDisplay");
+var gGodDisplay = "Locked";
 
+gGodAdd.addEventListener("mousedown", gGodAdding, true);
+
+function gGodAdding() {
+    if ((score >= gGodCost) && (gGodLocked == false)) {
+        gGodCount += 1;
+        autoFarmLevel += 128;
+        score -= gGodCost;
+        gGodCost = gGodCost * 2;
+        gGodDisplay = "Eru Iluvatar (you have " + gGodCount + "):" +gGodCost;
+        gGodDisplayView.innerHTML = gGodDisplay;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//other stuff for autofamring
 function autofarm1() {
     score += autoFarmLevel;
     scoreDisplay.innerHTML = score;
@@ -395,7 +431,7 @@ function lBowAdding() {
 }
 //greatsword
 var gSwordCount = 0;
-var gSwordCost = 121500;
+var gSwordCost = 364500;
 var gSwordLocked = true;
 var gSwordDisplay = "locked";
 var gSwordAdd = document.getElementById("buyGSword");
@@ -412,7 +448,32 @@ function gSwordAdding() {
             gSwordDisplay = "Greatsword (you have " + gSwordCount + "):" + gSwordCost;
             gSwordDisplayView.innerHTML = gSwordDisplay;
         }
+         if (gSwordCount >= 2) {
+            wStaffLocked = false;
+            wStaffDisplay = "Wizard's Staff (you have " + wStaffCount + "):" + wStaffCost;
+            wStaffDisplayView.innerHTML = wStaffDisplay;
+        }
 }
 
 
 //wizzard's staff
+
+var wStaffCount = 0;
+var wStaffCost = 24300;
+var wStaffLocked = true;
+var wStaffDisplay = "locked";
+var wStaffAdd = document.getElementById("buyWStaff");
+var wStaffDisplayView = document.getElementById("wStaffDisplay");
+
+wStaffAdd.addEventListener("mousedown", wStaffAdding, true);
+
+function wStaffAdding() {
+        if ((score >= wStaffCost) && (wStaffLocked == false)) {
+            wStaffCount += 1;
+            clickPower += 128;
+            score -= wStaffCost;
+            wStaffCost = wStaffCost * 2;
+            wStaffDisplay = "Wizard's Staff (you have " + wStaffCount + "):" + wStaffCost;
+            wStaffDisplayView.innerHTML = wStaffDisplay;
+        }
+}
