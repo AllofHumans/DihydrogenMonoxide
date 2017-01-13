@@ -162,10 +162,36 @@ function foolAdding() {
         foolCost = foolCost * 2;
         foolDisplay = "Peregrin Took (you have " + foolCount + "):" + foolCost;
         foolDisplayView.innerHTML = foolDisplay;
-        
+    }
+    if (foolCount >= 2) {
+        kingLocked = false;
+        kingDisplay = "Aragorn (you have " + kingCount + "):" + kingCost;
+        kingDisplayView.innerHTML = kingDisplay;
     }
 }
 //Aragorn
+var kingCount = 0;
+var kingAdd = document.getElementById("buyKing");
+var kingCost = 20250;
+var kingLocked = true;
+var kingDisplayView= document.getElementById("kingDisplay");
+var kingDisplay = "Locked";
+
+kingAdd.addEventListener("mousedown", kingAdding, true);
+
+function kingAdding() {
+    if ((score >= kingCost) && (kingLocked == false)) {
+        kingCount += 1;
+        autoFarmLevel += 32;
+        score -= kingCost;
+        kingCost = kingCost * 2;
+        kingDisplay = "Aragorn (you have " + kingCount + "):" + kingCost;
+        kingDisplayView.innerHTML = kingDisplay;
+        
+    }
+}
+
+
 //Gandoff
 //Eru Ilúvatar (auto-win button)
 
@@ -311,8 +337,32 @@ function axeAdding() {
             axeDisplay = "Battleaxe (you have " + axeCount + "):" + axeCost;
             axeDisplayView.innerHTML = axeDisplay;
         }
+         if (axeCount >= 2) {
+            lBowLocked = false;
+            lBowDisplay = "Longbow (you have " + lBowCount + "):" + lBowCost;
+            lBowDisplayView.innerHTML = lBowDisplay;
+        }
 }
 
 //longbow
+var lBowCount = 0;
+var lBowCost = 40500;
+var lBowLocked = true;
+var lBowDisplay = "locked";
+var lBowAdd = document.getElementById("buyLBow");
+var lBowDisplayView = document.getElementById("lBowDisplay");
+
+lBowAdd.addEventListener("mousedown", lBowAdding, true);
+
+function lBowAdding() {
+        if ((score >= lBowCost) && (lBowLocked == false)) {
+            lBowCount += 1;
+            clickPower += 32;
+            score -= lBowCost;
+            lBowCost = lBowCost * 2;
+            lBowDisplay = "Longbow (you have " + lBowCount + "):" + lBowCost;
+            lBowDisplayView.innerHTML = lBowDisplay;
+        }
+}
 //greatsword
 //wizzard's staff
