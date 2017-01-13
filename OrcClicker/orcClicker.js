@@ -139,7 +139,7 @@ function elvishSAdding() {
     }
     if (elvishSCount >= 2) {
         foolLocked = false;
-        foolDisplay = "Elvish Soldier (you have " + foolCount + "):" + foolCost;
+        foolDisplay = "Peregrin Took (you have " + foolCount + "):" + foolCost;
         foolDisplayView.innerHTML = foolDisplay;
     }
 }
