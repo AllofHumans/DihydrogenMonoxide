@@ -187,12 +187,36 @@ function kingAdding() {
         kingCost = kingCost * 2;
         kingDisplay = "Aragorn (you have " + kingCount + "):" + kingCost;
         kingDisplayView.innerHTML = kingDisplay;
-        
+    }
+      if (kingCount >= 2) {
+        sGodLocked = false;
+        sGodDisplay = "Aragorn (you have " + sGodCount + "):" + sGodCost;
+        sGodDisplayView.innerHTML = sGodDisplay;
+}
+}
+
+//Gandoff
+var sGodCount = 0;
+var sGodAdd = document.getElementById("buySGod");
+var sGodCost = 20250;
+var sGodLocked = true;
+var sGodDisplayView= document.getElementById("sGodDisplay");
+var sGodDisplay = "Locked";
+
+sGodAdd.addEventListener("mousedown", sGodAdding, true);
+
+function sGodAdding() {
+    if ((score >= sGodCost) && (sGodLocked == false)) {
+        sGodCount += 1;
+        autoFarmLevel += 64;
+        score -= sGodCost;
+        sGodCost = sGodCost * 2;
+        sGodDisplay = "Gandoff (you have " + sGodCount + "):" + sGodCost;
+        sGodDisplayView.innerHTML = sGodDisplay;
     }
 }
 
 
-//Gandoff
 //Eru Ilúvatar (auto-win button)
 
 function autofarm1() {
@@ -363,6 +387,32 @@ function lBowAdding() {
             lBowDisplay = "Longbow (you have " + lBowCount + "):" + lBowCost;
             lBowDisplayView.innerHTML = lBowDisplay;
         }
+         if (lBowCount >= 2) {
+            gSwordLocked = false;
+            gSwordDisplay = "Greatsword (you have " + gSwordCount + "):" + gSwordCost;
+            gSwordDisplayView.innerHTML = gSwordDisplay;
+        }
 }
 //greatsword
+var gSwordCount = 0;
+var gSwordCost = 121500;
+var gSwordLocked = true;
+var gSwordDisplay = "locked";
+var gSwordAdd = document.getElementById("buyGSword");
+var gSwordDisplayView = document.getElementById("gSwordDisplay");
+
+gSwordAdd.addEventListener("mousedown", gSwordAdding, true);
+
+function gSwordAdding() {
+        if ((score >= gSwordCost) && (gSwordLocked == false)) {
+            gSwordCount += 1;
+            clickPower += 64;
+            score -= gSwordCost;
+            gSwordCost = gSwordCost * 2;
+            gSwordDisplay = "Greatsword (you have " + gSwordCount + "):" + gSwordCost;
+            gSwordDisplayView.innerHTML = gSwordDisplay;
+        }
+}
+
+
 //wizzard's staff
