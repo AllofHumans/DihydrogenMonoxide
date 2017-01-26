@@ -222,7 +222,7 @@ function sGodAdding() {
 }
 
 
-//Eru Ilúvatar (auto-win button)
+//Eru Ilúvatar
 var gGodCount = 0;
 var gGodAdd = document.getElementById("buyGGod");
 var gGodCost = 182250;
@@ -240,6 +240,9 @@ function gGodAdding() {
         gGodCost = gGodCost * 2;
         gGodDisplay = "Eru Iluvatar (you have " + gGodCount + "):" +gGodCost;
         gGodDisplayView.innerHTML = gGodDisplay;
+    }
+    if (gGodCount >= 3) {
+        alert ("You Win")
     }
 }
 
@@ -459,7 +462,7 @@ function gSwordAdding() {
 //wizzard's staff
 
 var wStaffCount = 0;
-var wStaffCost = ;
+var wStaffCost = 364500;
 var wStaffLocked = true;
 var wStaffDisplay = "locked";
 var wStaffAdd = document.getElementById("buyWStaff");
@@ -476,4 +479,7 @@ function wStaffAdding() {
             wStaffDisplay = "Wizard's Staff (you have " + wStaffCount + "):" + wStaffCost;
             wStaffDisplayView.innerHTML = wStaffDisplay;
         }
+        if (wStaffCount >= 3) {
+        alert ("You Win")
+    }
 }
