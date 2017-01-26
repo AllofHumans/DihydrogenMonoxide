@@ -15,8 +15,9 @@ button {
     width: 300px;
 }
 .devTools {
-    display: inline;
+    display: none;
 }
 #iWin {
-    display: none
+    display: none;
+    color: #85aae5;
 }
