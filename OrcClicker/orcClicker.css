@@ -17,4 +17,6 @@ button {
 .devTools {
     display: inline;
 }
-
+#iWin {
+    display: none
+}

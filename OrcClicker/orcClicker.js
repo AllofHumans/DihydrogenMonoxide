@@ -242,7 +242,7 @@ function gGodAdding() {
         gGodDisplayView.innerHTML = gGodDisplay;
     }
     if (gGodCount >= 3) {
-        alert ("You Win")
+        document.getElementById("iWin").style.display = "inline";
     }
 }
 
@@ -480,6 +480,6 @@ function wStaffAdding() {
             wStaffDisplayView.innerHTML = wStaffDisplay;
         }
         if (wStaffCount >= 3) {
-        alert ("You Win")
+            document.getElementById("iWin").style.display = "inline";
     }
 }
