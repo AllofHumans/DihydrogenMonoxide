@@ -190,7 +190,7 @@ function kingAdding() {
     }
       if (kingCount >= 2) {
         sGodLocked = false;
-        sGodDisplay = "Aragorn (you have " + sGodCount + "):" + sGodCost;
+        sGodDisplay = "Gandoff (you have " + sGodCount + "):" + sGodCost;
         sGodDisplayView.innerHTML = sGodDisplay;
     }
 }
