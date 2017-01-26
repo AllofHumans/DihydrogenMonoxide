@@ -198,7 +198,7 @@ function kingAdding() {
 //Gandoff
 var sGodCount = 0;
 var sGodAdd = document.getElementById("buySGod");
-var sGodCost = 20250;
+var sGodCost = 60750;
 var sGodLocked = true;
 var sGodDisplayView= document.getElementById("sGodDisplay");
 var sGodDisplay = "Locked";
@@ -225,7 +225,7 @@ function sGodAdding() {
 //Eru Ilúvatar (auto-win button)
 var gGodCount = 0;
 var gGodAdd = document.getElementById("buyGGod");
-var gGodCost = 20250;
+var gGodCost = 182250;
 var gGodLocked = true;
 var gGodDisplayView= document.getElementById("gGodDisplay");
 var gGodDisplay = "Locked";
@@ -431,7 +431,7 @@ function lBowAdding() {
 }
 //greatsword
 var gSwordCount = 0;
-var gSwordCost = 364500;
+var gSwordCost = 121500;
 var gSwordLocked = true;
 var gSwordDisplay = "locked";
 var gSwordAdd = document.getElementById("buyGSword");
@@ -459,7 +459,7 @@ function gSwordAdding() {
 //wizzard's staff
 
 var wStaffCount = 0;
-var wStaffCost = 24300;
+var wStaffCost = ;
 var wStaffLocked = true;
 var wStaffDisplay = "locked";
 var wStaffAdd = document.getElementById("buyWStaff");

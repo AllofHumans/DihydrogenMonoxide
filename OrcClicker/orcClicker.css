@@ -15,6 +15,6 @@ button {
     width: 300px;
 }
 .devTools {
-    display: inline;
+    display: none;
 }
 
