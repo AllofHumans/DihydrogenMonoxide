@@ -1,6 +1,7 @@
 html {
     background-color: #737477;
     text-align: center;
+    font-family: monospace;
 
 }
 button {
@@ -20,4 +21,21 @@ button {
 #iWin {
     display: none;
     color: #85aae5;
+}
+#orcClick1 {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    background-color: #b70303;
+    height: 60px;
+}
+#autoFarmCount1 {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top; 
+    background-color: #b70303;
+    height: 60px;
+}
+h4 {
+    text-decoration: none;
 }

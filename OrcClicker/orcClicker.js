@@ -5,10 +5,52 @@ var clickPower = 1;
 var button = document.getElementById("head");
 var scoreDisplay = document.getElementById("score");
 var score = 0;
+var orcClickPower= document.getElementById("orcClick");
+var orcAutofarmPower= document.getElementById("autoFarmCount");
+var clickRate = document.getElementById("headsPerSecond");
+var cps = 0; 
+
+
+function cpsReturn() {
+    if (((cps * clickPower) + autoFarmLevel) == 1) {
+        clickRate.innerHTML = "You and your followers behead 1 Orc per second.";
+        cps = 0;
+    }
+    else {
+        clickRate.innerHTML = "You and your followers behead " + ((cps * clickPower) + autoFarmLevel) + " Orcs per second.";
+        cps = 0;
+    }
+}
+
+function cpsCount() {
+    cps ++;
+}
 
 document.getElementById("img2").style.display = "none";
 
 button.addEventListener("mousedown", orcHeadClick, true);
+button.addEventListener("mousedown", cpsCount, true);
+
+window.setInterval(gameInfoUpdate, 1);
+window.setInterval(cpsReturn, 1000);
+
+
+function gameInfoUpdate() {
+    if (clickPower == 1) {
+        orcClickPower.innerHTML = "You behead 1 Orc per click.";
+    }
+    else {
+        orcClickPower.innerHTML = "You behead " + clickPower + " Orcs per click.";
+    }
+    
+    if (autoFarmLevel == 1) {
+        orcAutofarmPower.innerHTML = "Your followers behead 1 Orc per second.";
+    }
+    else {
+        orcAutofarmPower.innerHTML = "Your followers behead " + autoFarmLevel + " Orcs per second.";
+    }
+}
+
 
 
 function orcHeadClick() {
@@ -31,7 +73,7 @@ function cheating() {
 var reset = document.getElementById("reset");
 reset.addEventListener("mousedown", noCheat, true);
 function noCheat() {
-    score = 0
+    score = 0;
 }
 //autofarmers
 
