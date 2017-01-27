@@ -1,5 +1,9 @@
 //orc_clicker.js
-//basics
+//basics and game mechanincs
+
+
+
+//vars and other basics
 var autoFarmLevel = 0;
 var clickPower = 1;
 var button = document.getElementById("head");
@@ -10,7 +14,11 @@ var orcAutofarmPower= document.getElementById("autoFarmCount");
 var clickRate = document.getElementById("headsPerSecond");
 var cps = 0; 
 
+document.getElementById("img2").style.display = "none";
 
+//cps counters
+button.addEventListener("mousedown", cpsCount, true);
+window.setInterval(cpsReturn, 1000);
 function cpsReturn() {
     if (((cps * clickPower) + autoFarmLevel) == 1) {
         clickRate.innerHTML = "You and your followers behead 1 Orc per second.";
@@ -26,13 +34,13 @@ function cpsCount() {
     cps ++;
 }
 
-document.getElementById("img2").style.display = "none";
 
-button.addEventListener("mousedown", orcHeadClick, true);
-button.addEventListener("mousedown", cpsCount, true);
 
+
+
+
+//Orcs per click and auto farm display
 window.setInterval(gameInfoUpdate, 1);
-window.setInterval(cpsReturn, 1000);
 
 
 function gameInfoUpdate() {
@@ -52,18 +60,25 @@ function gameInfoUpdate() {
 }
 
 
+//base score increase (for click) and visual effects for click
 
+button.addEventListener("mousedown", orcHeadClick, true);
 function orcHeadClick() {
     score += clickPower;
     scoreDisplay.innerHTML = score;
     document.getElementById("img2").style.display = "inline";
     document.getElementById("head").style.display = "none";
     window.setTimeout(orcCLickstyle, 80);
+
 }
+
+
 function orcCLickstyle() {
     document.getElementById("img2").style.display = "none";
     document.getElementById("head").style.display = "inline";
 }
+
+
 //devtools
 var cheats = document.getElementById("cheat");
 cheats.addEventListener("mousedown", cheating, true);
@@ -311,6 +326,11 @@ function autofarm1() {
 }
 
 window.setInterval(autofarm1, 1000);
+
+
+
+
+
 
 //click increasers
 
