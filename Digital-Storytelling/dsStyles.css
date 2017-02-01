@@ -1,0 +1,45 @@
+html {
+    background-color: grey;
+}
+ul {
+   list-style: none; 
+   background-color: black;
+   height: 40px;
+}
+li {
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    margin-top: 10px;
+}
+li a {
+    font-family: Helvetica;
+    text-decoration: none;
+    color: #00ff00;
+}
+.blod {
+    text-decoration: bold;
+}
+
+
+li :hover {
+  background-color:#00ff00 ;
+  color: black;
+}
+
+a {
+  background: none;
+  border-style: none;
+  border: 2px solid white;
+  padding: 6px;
+  color: black;
+}
+h2 {
+    text-align: center;
+    float: right;
+    margin-right: 100px;
+}
+img {
+    height: 50px;
+    float: left;
+}

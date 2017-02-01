@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 ul {
-   list-style: none; /*gets rid of bullet points*/
+   list-style: none; 
    background-color: black;
    height: 40px;
 }
