@@ -38,6 +38,8 @@ h2 {
     text-align: center;
     float: right;
     margin-right: 100px;
+    background-color: #a5a2a2;
+    border:5px solid #720b05;
 }
 img {
     height: 50px;

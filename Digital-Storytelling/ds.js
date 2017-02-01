@@ -1,5 +1,5 @@
 // JavaScript File
-var audio = document.getElementById("rap");
+var audio = document.getElementById("rick");
 var button = document.getElementById("button");
 var on = false;
 
