@@ -68,3 +68,19 @@ img {
 .center {
     text-align: center;
 }
+
+#playVid, #pauseVid {
+    width: 50%;
+}
+
+#button {
+    background-color: #00364e;
+}
+#movie {
+    width: 400px;
+}
+
+.bottom {
+    text-align: center;
+    vertical-align: bottom;
+}

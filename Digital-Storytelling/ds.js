@@ -27,11 +27,32 @@ playRap.addEventListener("mousedown", play, true);
 pauseRap.addEventListener("mousedown", pause, true);
 
 function play() {
-    rap.play;
+    rap.play();
  
 }
 function pause() {
-    rap.pause;
+    rap.pause();
     
 }
-f
+
+
+//movie
+document.getElementById("movie").style.display = "none";
+
+var toggleon = false;
+var toggle = document.getElementById("startVid");
+
+toggle.addEventListener("mousedown", toggleVid, true);
+
+
+
+function toggleVid() {
+    if (toggleon==false) {
+    document.getElementById("movie").style.display = "inline";
+    toggleon = true;
+    }
+    else {
+    document.getElementById("movie").style.display = "none";
+    toggleon = false;
+    }
+}
