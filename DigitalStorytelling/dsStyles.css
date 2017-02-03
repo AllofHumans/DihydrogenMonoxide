@@ -76,11 +76,38 @@ img {
 #button {
     background-color: #00364e;
 }
-#movie {
-    width: 400px;
+#video, #startVid {
+    width: 500px;
 }
 
 .bottom {
     text-align: center;
     vertical-align: bottom;
+}
+
+.mainText {
+   width: 350px;
+   margin: auto;
+}
+h3 {
+    text-align: center;
+}
+#selectAchievment, #selectHumans, #selectIntegrity, #selectWisdom {
+    width: 100px;
+    text-align: center;
+}
+#goodHuman, #badHuman, #return {
+    display: block;
+    text-align: center;
+    float: none;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+#answer {
+    text-align: center;
+}
+#spoil {
+    margin-bottom: 15px;
 }

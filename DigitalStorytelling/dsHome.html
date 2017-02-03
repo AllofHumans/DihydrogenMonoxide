@@ -40,6 +40,7 @@ HOW TO UPDATE
             <li>
                 <a href="dsAch.html">Achievment</a>
             </li>
+        
         </ul>
         
         
@@ -57,16 +58,31 @@ HOW TO UPDATE
             <h3 class="center">Listen to our Beliefs</h3>
             <button id="play"><img src="playbutton.png"></button>
             <button id="pause"><img  src="pausebutton.png"></button>
-        </div>
+        </div> 
         
       
         <div class="bottom">
-            <button id="startVid"><h3>Watch this short instructional video to know how to live your life!</h3></button>
+            <button id="spoil"><h3>Take this survey to see if you are a decent person.</h3></button>
             
-            <div id="movie">
-                <video id="video" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
+            <div id="spoiled">
+                <div id="question">
+                <p>Which of these is evil?</p>
+                
+                <button id="selectHumans">Humans</button>
+                <button id="selectIntegrity">Integrity</button>
+                <br>
+                <button id="selectWisdom">Wisdom</button>
+                <button id="selectAchievment">Achievment</button>
+                <br>
+                <button id="submit">SUBMIT</button>
+                </div>
+                
+                <div id="answer">
+                <h2 id="badHuman">You are <b>NOT</b> a decent person</h2>
+                <h2 id="goodHuman">You are a decent person.</h2>
+                <br>
+                <button id="return">Back to quizz</button>
+                </div>
             
             </div>
         </div>
