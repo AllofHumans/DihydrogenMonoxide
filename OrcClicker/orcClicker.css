@@ -16,7 +16,7 @@ button {
     width: 300px;
 }
 .devTools {
-    display: nonE;
+    display: none;
 }
 #iWin {
     display: none;
